@@ -8,7 +8,7 @@
 | **TypeScript**   | 5          | `satisfies` 運算子                         |
 | **ASP.NET Core** | 9          | Minimal API, CRUD, Endpoint Filter          |
 | **Redis**        | 7          | Caching, Cache Invalidation, Pub/Sub        |
-| **MSSQL**        | 2022       | 資料庫管理與                               |
+| **MSSQL**        | 2022       | 資料庫管理                                 |
 | **Docker**       | Compose    | 容器化佈署, Volume 設定                    |
 
 總結
@@ -21,6 +21,6 @@ Redis 的快取與即時通知功能，讓資料同步更迅速。
 
 
 如何啟動專案
-<br>git clone</br>
-<br>cd fullstack-demo</br>
-<br>docker-compose up  //(要有docker) </br>
+git clone  
+cd fullstack-demo  
+docker-compose up  //(要有docker)
