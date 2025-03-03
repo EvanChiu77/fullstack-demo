@@ -18,6 +18,8 @@ TypeScript 5 強型別的優勢在於除錯更高效，減少運行錯誤。
 Docker Compose 的統一佈署方式，解決了環境與版本控管的問題。
 Redis 的快取與即時通知功能，讓資料同步更迅速。
 
-git clone https://github.com/你的帳號/fullstack-demo.git
+
+如何啟動專案
+git clone
 cd fullstack-demo
-docker-compose up
+docker-compose up  //(要有docker)
