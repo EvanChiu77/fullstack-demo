@@ -1,0 +1,15 @@
+# nextjs-app/Dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+# 生產模式要打開
+RUN npm run build
+
+EXPOSE 3000
+# 開發模式
+#CMD ["npm", "run", "dev"]
+
+# 生產模式
+ CMD ["npm", "run", "start"]
