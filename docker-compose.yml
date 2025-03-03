@@ -1,0 +1,46 @@
+services:
+  nextjs:
+    build: ./nextjs-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      #- HOST=0.0.0.0
+      #- PORT=3000
+   # command: npm run dev
+
+  aspnet:
+    build: ./aspnet-api
+    ports:
+      - "5231:80"
+    environment:
+    - ASPNETCORE_URLS=http://0.0.0.0:80
+    depends_on:
+      - mssql
+      - redis
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: my_mssql
+    environment:
+      SA_PASSWORD: "YourStrong@Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  redis:
+    image: redis:7
+    container_name: my_redis
+    ports:
+      - "6379:6379"
+    volumes:
+    - redis_data:/data
+    command: ["redis-server", "--appendonly", "yes"]
+
+
+
+volumes:
+  mssql_data:
+  redis_data:
