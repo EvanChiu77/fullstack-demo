@@ -20,7 +20,7 @@ Redis 的快取與即時通知功能，讓資料同步更迅速。
 
 
 
-如何啟動專案
+如何啟動專案  
 git clone  
 cd fullstack-demo  
 docker-compose up  //(要有docker)
