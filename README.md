@@ -24,3 +24,6 @@ Redis 的快取與即時通知功能，讓資料同步更迅速。
 git clone  
 cd fullstack-demo  
 docker-compose up  //(要有docker)
+
+
+##for 自己紀錄 https://docs.google.com/document/d/1zBdHtsV49-LA_XNjiWViTN9M9ZK3Wnwy1QTAiPNvWD8/edit?usp=sharing
